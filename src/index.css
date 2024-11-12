@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: myCustFont;
+  src: url(./assets/sangira/Sangira.otf);
+}
+
+.custom {
+  font-family: myCustFont, serif;
+}
+#percent-total {
+  font-size: 250px;
+  transform: translateY(80px);
+}
