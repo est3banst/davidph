@@ -49,7 +49,7 @@ const Picture = () => {
           onClick={closeModal}
         >
           <button
-              className="absolute top-2 right-2 text-neutral-50 text-3xl hover:cursor-pointer font-bold"
+              className="absolute top-2 right-2 z-[998] text-neutral-50 text-3xl hover:cursor-pointer font-bold"
               onClick={closeModal}
             >
               &times;
