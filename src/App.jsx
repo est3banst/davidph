@@ -87,12 +87,12 @@ return (
 
       <HorizontalScrollCarousel />
       </div>
-      <div className="flex flex-col h-48 items-center">
+      <div className="flex flex-col h-48 mx-4 lg:items-center">
         <span className="font-semibold uppercase md:text-xl lg:text-3xl text-neutral-100">
           DAVID PUIG PÉREZ
           <p className="text-sm text-white">FOTÓGRAFO</p>
         </span>
-        <p className="p-4 text-xs md:text-base lg:text-2xl text-neutral-100">De mi profesión solo puedo decir que es la más apasionante del mundo</p>
+        <p className="p-2 custom-font text-base md:text-xl lg:text-2xl text-neutral-100">De mi profesión solo puedo decir que es la más apasionante del mundo</p>
       </div>
     </div>
     <Picture>

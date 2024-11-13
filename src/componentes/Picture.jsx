@@ -1,23 +1,39 @@
 import React from 'react'
+import { useState } from 'react';
 import Main from './Main'
 
 
 const Picture = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
     return (
       <>
-        <div>
-          <h2>Fotografías</h2>
-          <small>Disfrutad!</small>
+        <div className="bg-neutral-800">
+        <div className="">
+          <h2 className="mb-4 mx-4 pb-4 border-b-4 w-max text-base md:text-2xl lg:text-3xl text-slate-100">Fotografías</h2>
+          
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3 gap-2">
           {pictures.map((pic, index) => {
             console.log(index)
             const isFullWidth = index % 3 === 0; 
             return (
               <div
                 key={pic.id}
-                className={`${
-                  isFullWidth ? 'col-span-1 md:col-span-2 h-[50vh]' : 'h-[50vh]'
+                onClick={() => openModal(pic)}
+                className={`gap-2 custom-scale transition-all duration-100 grayscale hover:grayscale-0 cursor-pointer
+                  ${isFullWidth ? 'col-span-2 row-span-2 md:col-span-1 md:row-span-1' : 'col-span-1 row-span-1 md:col-span-2 md:row-span-1'
                 }`}
               >
                 <Main Picture={pic} />
@@ -25,17 +41,30 @@ const Picture = () => {
             );
           })}
         </div>
+        </div>
+        {isModalOpen && selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 h-[100vh] flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <button
+              className="absolute top-2 right-2 text-neutral-50 text-3xl hover:cursor-pointer font-bold"
+              onClick={closeModal}
+            >
+              &times;
+            </button>
+          <div className="relative p-8 bg-transparent rounded-md max-w-3xl w-full">
+            
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full h-[90vh] max-h-[90vh] object-contain"
+            />
+          </div>
+        </div>
+      )}
       </>
     );
-  };
-  
-
-const getAreaClass = (index) => {
-    const areaClasses = [
-      "area1", "area2", "area3",
-      "area4", "area5", "area6"
-    ];
-    return areaClasses[index];
   };
 
 export default Picture
@@ -57,7 +86,7 @@ const pictures = [
         id: 33,
     },
     {
-        src:'/imgs/ma-jo-siri.jpeg',
+        src:'/imgs/sa-mod.jpeg',
         alt:'María José Siri',
         id: 44,
     },
@@ -70,5 +99,10 @@ const pictures = [
         src:'/imgs/cheff-e.jpeg',
         alt:'Cheff',
         id: 66,
+    },
+    {
+      src: '/imgs/c-piaget.jpeg',
+      alt: 'Modelo',
+      id: 77,
     },
 ]

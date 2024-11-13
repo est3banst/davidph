@@ -1,17 +1,13 @@
 import React from 'react'
 
-const Main = ({ Picture, customClass }) => {
+const Main = ({ Picture }) => {
   return (
     <div 
     key = {Picture.id}
-    className={`relative ${customClass} p-2`}>
-        <div>
+    className="relative p-2">
             <section>
-                <img src={Picture.src} alt={Picture.alt} className="object-cover w-full h-full"/>
+                <img src={Picture.src} alt={Picture.alt} className="object-contain w-full h-full md:h-auto"/>
             </section>
-            
-            
-        </div>
     </div>
   )
 }
