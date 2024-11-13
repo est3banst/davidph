@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import Main from './Main'
-
+import Main from './Main';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Picture = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -53,13 +54,16 @@ const Picture = () => {
             >
               &times;
             </button>
-          <div className="relative p-8 bg-transparent rounded-md max-w-3xl w-full">
-            
+          <div 
+          onClick={(e) => e.stopPropagation()}
+          className="relative p-8 bg-transparent rounded-md max-w-3xl w-full">
+          <Zoom>
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
               className="w-full h-[90vh] max-h-[90vh] object-contain"
             />
+            </Zoom>
           </div>
         </div>
       )}
