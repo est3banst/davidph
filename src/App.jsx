@@ -1,6 +1,7 @@
 import HorizontalScrollCarousel from "./componentes/Hero";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
+import Picture from "./componentes/Picture";
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
   }, []);
 
 return (
+    <>
     <div className="bg-neutral-800">
       <div className="grid h-[100vh] gap-5 md:justify-around lg:items-center justify-center">
         <div className="grid grid-cols-2 h-[20vh] items-center justify-evenly">
@@ -85,12 +87,18 @@ return (
 
       <HorizontalScrollCarousel />
       </div>
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
+      <div className="flex flex-col h-48 items-center">
+        <span className="font-semibold uppercase md:text-xl lg:text-3xl text-neutral-100">
+          DAVID PUIG PÉREZ
+          <p className="text-sm text-white">FOTÓGRAFO</p>
         </span>
+        <p className="p-4 text-xs md:text-base lg:text-2xl text-neutral-100">De mi profesión solo puedo decir que es la más apasionante del mundo</p>
       </div>
     </div>
+    <Picture>
+      
+    </Picture>
+    </>
   );
 };
 

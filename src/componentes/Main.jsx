@@ -1,19 +1,15 @@
 import React from 'react'
 
-const Main = ({ Picture }) => {
+const Main = ({ Picture, customClass }) => {
   return (
     <div 
     key = {Picture.id}
-    className="">
+    className={`relative ${customClass} p-2`}>
         <div>
             <section>
-                <img src={Picture.src} alt="" />
+                <img src={Picture.src} alt={Picture.alt} className="object-cover w-full h-full"/>
             </section>
-            <div className="absolute inset-0 z-10 grid place-content-center">
-          <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-            {Picture.title}
-          </p>
-        </div>
+            
             
         </div>
     </div>
