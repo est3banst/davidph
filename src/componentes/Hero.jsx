@@ -8,12 +8,12 @@ const HorizontalScrollCarousel = () => {
       target: targetRef,
     });
   
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-90%"]);
   
     return (
-      <section ref={targetRef} className="relative h-[400vh] bg-neutral-900">
+      <section ref={targetRef} className="relative h-[400vh] bg-neutral-800">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex gap-4 w-[400vw]">
+          <motion.div style={{ x }} className="flex gap-5 w-[400vw]">
             {cards.map((card) => {
               return <Card card={card} key={card.id} />;
             })}
@@ -26,37 +26,37 @@ const HorizontalScrollCarousel = () => {
 
 const cards = [
     {
-      url: "/src/assets/12.jpg",
+      url: "/imgs/12.jpg",
       id: 1,
       title: "Retratos",
     },
     {
-      url: "/src/assets/1.jpg",
+      url: "/imgs/1.jpg",
       id: 2,
       title: "Publicidad",
     },
     {
-      url: "/src/assets/2.jpg",
+      url: "/imgs/2.jpg",
       id: 3,
       title: "Reportaje",
     },
     {
-      url: "/src/assets/3.jpg",
+      url: "/imgs/3.jpg",
       id: 4,
       title: "Producto",
     },
     {
-      url: "/src/assets/5.jpg",
+      url: "/imgs/5.jpg",
       id: 5,
       title: "Moda",
     },
     {
-      url: "/src/assets/7.jpg",
+      url: "/imgs/7.jpg",
       id: 6,
       title: "Audiovisual",
     },
     {
-      url: "/src/assets/9.jpg",
+      url: "/imgs/9.jpg",
       id: 7,
       title: "Staff",
     },
