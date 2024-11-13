@@ -5,8 +5,8 @@ import React from "react";
 
 const App = () => {
   const [fadeIn, setFadeIn] = useState(false);
-  const [scrollEffect, setScrollEffect] = useState(0);
-  const [isTextVisible, setIsTextVisible] = useState(true);
+  const [scrollEffect, setScrollEffect] = useState(1);
+  const [textPos, setTextBehind] = useState(false);
   
   const carouselRef = useRef(null);
   const nameIdRef = useRef(null);
@@ -17,16 +17,18 @@ const App = () => {
     const handleScroll = () => {
       if (carouselRef.current && nameIdRef.current) {
         const carouselTop = carouselRef.current.getBoundingClientRect().top;
-        const carouselBottom = carouselRef.current.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
-
-        if (carouselTop < windowHeight && carouselBottom > 0) {
-          const effectStrength = (1 - carouselTop / windowHeight) * 1.7;
-          setScrollEffect(effectStrength);
-          setIsTextVisible(false); 
+       
+        if (carouselTop < windowHeight && carouselTop > windowHeight * 0.7) {
+          const effectStrength = (windowHeight * 0.7 - carouselTop) / (windowHeight * 0.3);
+          setScrollEffect(1 - effectStrength);
+          setTextBehind(true);
+        } else if (carouselTop <= windowHeight * 0.7) {
+          setScrollEffect(0); 
+          setTextBehind(true);
         } else {
-          setScrollEffect(0);
-          setIsTextVisible(true); 
+          setScrollEffect(1);
+          setTextBehind(false);
         }
       }
     };
@@ -64,14 +66,14 @@ return (
         <div
           ref={nameIdRef}
           style={{
-            opacity: isTextVisible ? 1 - scrollEffect : 0,
-            transform: `translateY(${scrollEffect * 20}px)`,
+            opacity: scrollEffect,
+            transform: `translateY(${(1 - scrollEffect) * 20}px)`,
             transition: "opacity 0.3s ease, transform 0.5s ease",
             position: "fixed",
-            zIndex: 70,
+            zIndex: textPos ? 10 : 70,
           }}
           className=
-          "custom text-6xl w-[100vw] mt-4 text-center md:text-8xl lg:text-9xl bottom-0 font-bold uppercase text-slate-50 transition-all duration-1000">
+          "custom text-6xl w-[100vw] mt-4 mb-3 text-center md:text-8xl lg:text-9xl bottom-0 font-bold uppercase text-slate-50 transition-all duration-1000">
           
           David Puig
         </div>

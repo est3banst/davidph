@@ -41,11 +41,6 @@ const cards = [
       title: "Reportaje",
     },
     {
-      url: "/imgs/3.jpg",
-      id: 4,
-      title: "Producto",
-    },
-    {
       url: "/imgs/5.jpg",
       id: 5,
       title: "Moda",
@@ -53,12 +48,12 @@ const cards = [
     {
       url: "/imgs/7.jpg",
       id: 6,
-      title: "Audiovisual",
+      title: "Producto",
     },
     {
       url: "/imgs/9.jpg",
       id: 7,
-      title: "Staff",
+      title: "Audiovisual",
     },
   ];
 
