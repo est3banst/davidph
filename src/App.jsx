@@ -87,8 +87,8 @@ return (
 
       <HorizontalScrollCarousel />
       </div>
-      <div className="flex flex-col h-48 mx-4 lg:items-center">
-        <span className="font-semibold uppercase md:text-xl lg:text-3xl text-neutral-100">
+      <div className="flex flex-col py-6 md:py-9 h-48 mx-4 lg:items-center">
+        <span className="font-semibold uppercase text-xl md:text-2xl lg:text-3xl text-neutral-100">
           DAVID PUIG PÉREZ
           <p className="text-sm text-white">FOTÓGRAFO</p>
         </span>
