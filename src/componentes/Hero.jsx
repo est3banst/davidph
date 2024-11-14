@@ -26,22 +26,22 @@ const HorizontalScrollCarousel = () => {
 
 const cards = [
     {
-      url: "/imgs/f-c-ninos.jpeg",
+      url: "/imgs/ch-comu-casamance-seneg.jpeg",
       id: 1,
       title: "Retratos",
     },
     {
-      url: "/imgs/1.jpg",
+      url: "/imgs/belice-unfpa.jpeg",
       id: 2,
-      title: "Publicidad",
-    },
-    {
-      url: "/imgs/2.jpg",
-      id: 3,
       title: "Reportaje",
     },
     {
-      url: "/imgs/5.jpg",
+      url: "/imgs/c-nos-p.jpeg",
+      id: 3,
+      title: "Publicidad",
+    },
+    {
+      url: "/imgs/moda-sm-wd.jpeg",
       id: 5,
       title: "Moda",
     },
@@ -51,7 +51,7 @@ const cards = [
       title: "Producto",
     },
     {
-      url: "/imgs/9.jpg",
+      url: "/imgs/ap-vip-c.jpeg",
       id: 7,
       title: "Audiovisual",
     },
