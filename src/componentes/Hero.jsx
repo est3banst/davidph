@@ -51,7 +51,7 @@ const cards = [
       title: "Producto",
     },
     {
-      url: "/imgs/ap-vip-c.jpeg",
+      url: "/imgs/s-domingo-m.jpeg",
       id: 7,
       title: "Audiovisual",
     },
