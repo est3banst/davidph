@@ -42,8 +42,8 @@ const App = () => {
 return (
     <>
     <div className="bg-neutral-100">
-      <div className="grid h-[100vh] gap-5 md:justify-around lg:items-center justify-center">
-        <div className="grid grid-cols-2 h-[20vh] items-center justify-evenly">
+      <div className="grid h-[100vh] gap-5 md:justify-around justify-center">
+        <div className="grid grid-rows-2 h-[20vh] items-center justify-evenly">
 
           <div className="flex gap-3 items-center">
             <svg  xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -53,18 +53,13 @@ return (
             <small id="timer" className="text-neutral-900"></small>
         
           </div>
-        <small className="flex flex-col gap-1 justify-center h-4">
-          <a href="mailto:david@davidpuigfotografía.com?subject=Presupuesto%20Proyecto" className="text-neutral-700 hover:text-black border-b-2 border-neutral-700 hover:border-black w-max">
+        <small className="flex flex-col text-base md:text-lg lg:text-xl gap-1 justify-center h-4">
+          <a href="mailto:david@davidpuigfotografía.com?subject=Presupuesto%20Proyecto" className="text-neutral-600 hover:text-black border-b-2 border-neutral-700 hover:border-black w-max">
           CONTACTO
           </a>
         </small>
       </div>
-        <small className="font-bold md:text-2xl lg:mb-6 uppercase text-base text-neutral-800">FOTO
-          <p className={`text-xs ${
-            fadeIn ? "opacity-100 translate-y-0" : "opacity-50 translate-y-5"}`}>
-            Montevideo, Madrid, Barcelona
-          </p>
-        </small>
+      
         <div
           ref={nameIdRef}
           style={{
@@ -75,9 +70,14 @@ return (
             zIndex: textPos ? 10 : 70,
           }}
           className=
-          "custom text-6xl w-[100vw] mt-4 mb-3 text-center md:text-8xl lg:text-9xl bottom-0 font-bold uppercase text-neutral-800 transition-all duration-1000">
+          "w-[100vw] h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000">
           
-          David Puig
+          <img 
+            src={applogo[0].imgSrc} 
+            alt={applogo[0].alt}
+            className="w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4"
+          />
+
         </div>
       </div>
       <div 
@@ -101,16 +101,20 @@ return (
      style={{
       opacity: scrollEffect
      }}
-     className={`text-neutral-100 w-7 animate-bounce absolute z-[779] bottom-[10%] right-0`}
+     className={`text-neutral-800 w-7 animate-bounce absolute z-[779] bottom-[10%] right-[5%]`}
      id="svg-down-arrow">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-        width="1em" height="1em" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M5 19V8h2v9h9v2zm5-5V3h2v9h9v2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M14.207 1.707L13.5 1l-6 6l-6-6l-.707.707l6.353 6.354h.708zm0 6L13.5 7l-6 6l-6-6l-.707.707l6.353 6.354h.708z" clip-rule="evenodd"/></svg>
     </div>
     </>
   );
 };
 
+const applogo = [
+  {
+    imgSrc: '/imgs/logo_completo_n.png',
+    alt: 'Logo David Puig',
+  }
+]
 
 export default App;
 
