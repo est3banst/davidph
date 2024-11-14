@@ -59,7 +59,7 @@ return (
           </a>
         </small>
       </div>
-        <small className="font-bold uppercase text-base text-slate-50">FOTO
+        <small className="font-bold lg:mb-6 uppercase text-base text-slate-50">FOTO
           <p className={`text-xs ${
             fadeIn ? "opacity-100 translate-y-0" : "opacity-50 translate-y-5"}`}>
             Montevideo, Madrid, Barcelona

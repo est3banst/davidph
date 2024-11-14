@@ -27,7 +27,6 @@ const Picture = () => {
         </div>
         <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3 gap-2">
           {pictures.map((pic, index) => {
-            console.log(index)
             const isFullWidth = index % 3 === 0; 
             return (
               <div
