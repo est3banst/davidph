@@ -8,7 +8,7 @@ const HorizontalScrollCarousel = () => {
       target: targetRef,
     });
   
-    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-90%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["5%", "-90%"]);
   
     return (
       <section ref={targetRef} className="relative h-[400vh] bg-neutral-800">
@@ -26,7 +26,7 @@ const HorizontalScrollCarousel = () => {
 
 const cards = [
     {
-      url: "/imgs/12.jpg",
+      url: "/imgs/f-c-ninos.jpeg",
       id: 1,
       title: "Retratos",
     },
