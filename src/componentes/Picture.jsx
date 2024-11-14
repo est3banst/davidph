@@ -20,9 +20,9 @@ const Picture = () => {
 
     return (
       <>
-        <div className="bg-neutral-800">
+        <div className="bg-slate-50">
         <div className="">
-          <h2 className="mb-4 mx-4 pb-4 border-b-4 w-max text-base md:text-2xl lg:text-3xl text-slate-100">Fotografías</h2>
+          <h2 className="mb-4 mx-4 pb-4 border-b-4 border-slate-900 w-max text-base md:text-2xl lg:text-3xl text-neutral-800">Fotografías</h2>
           
         </div>
         <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3 gap-2">

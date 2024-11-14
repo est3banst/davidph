@@ -5,11 +5,14 @@
 
 @font-face {
   font-family: myCustFont;
-  src: url(./assets/sangira/Sangira.otf);
+  src: url(./assets/UniversLTStd-BoldCn.otf);
   font-family: customHandFont;
-  src: url(./assets/sanford/Sanford-0103_demo.ttf);
+  src: url(./assets/UniversLTStd-BoldCn.otf);
 }
 
+body {
+  font-family: myCustFont, serif;
+}
 .custom {
   font-family: myCustFont, serif;
 }
