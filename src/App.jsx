@@ -67,15 +67,15 @@ return (
             transform: `translateY(${(1 - scrollEffect) * 20}px)`,
             transition: "opacity 0.3s ease, transform 0.5s ease",
             position: "fixed",
-            zIndex: textPos ? 10 : 70,
+            zIndex: textPos ? 1 : 70,
           }}
           className=
-          "w-[100vw] h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000">
+          {`w-[100vw] h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000`}>
           
           <img 
             src={applogo[0].imgSrc} 
             alt={applogo[0].alt}
-            className="w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4"
+            className={`w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4`}
           />
 
         </div>
