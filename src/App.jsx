@@ -4,6 +4,7 @@ import React from "react";
 import Picture from "./componentes/Picture";
 import Contact from "./componentes/Contact";
 import Footer from "./componentes/Footer";
+import Whats from "./componentes/Whats";
 
 
 const App = () => {
@@ -110,6 +111,7 @@ return (
       
     <Contact/>
     <Footer/>
+    <Whats />
     <div
      style={{
       opacity: scrollEffect
