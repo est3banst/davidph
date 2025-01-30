@@ -2,24 +2,31 @@ import HorizontalScrollCarousel from "./componentes/Hero";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import Picture from "./componentes/Picture";
+import Contact from "./componentes/Contact";
+import Footer from "./componentes/Footer";
 
 
 const App = () => {
   const [fadeIn, setFadeIn] = useState(false);
   const [scrollEffect, setScrollEffect] = useState(1);
   const [textPos, setTextBehind] = useState(false);
+  const [hideIn, setHidden] = useState(false);
   
   const carouselRef = useRef(null);
   const nameIdRef = useRef(null);
-
-
   
   useEffect(() => {
     const handleScroll = () => {
       if (carouselRef.current && nameIdRef.current) {
         const carouselTop = carouselRef.current.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-       
+       console.log(carouselTop)
+       if (carouselTop <= 400) {
+        setHidden(true);
+       }
+       else {
+        setHidden(false);
+       }
         if (carouselTop < windowHeight && carouselTop > windowHeight * 0.7) {
           const effectStrength = (windowHeight * 0.7 - carouselTop) / (windowHeight * 0.3);
           setScrollEffect(1 - effectStrength);
@@ -67,16 +74,21 @@ return (
             transform: `translateY(${(1 - scrollEffect) * 20}px)`,
             transition: "opacity 0.3s ease, transform 0.5s ease",
             position: "fixed",
+            display: hideIn ? 'none' : '',
             zIndex: textPos ? 1 : 70,
           }}
           className=
-          {`w-[100vw] h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000`}>
-          
+          {`w-[100vw] mix-blend-darken h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000`}>
+          <span className="font-extrabold absolute bottom-0 z-[988] text-xl right-6 text-slate-900">John Doe ,Ph.</span>
           <img 
             src={applogo[0].imgSrc} 
             alt={applogo[0].alt}
-            className={`w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4`}
+            style={{
+              display: hideIn ? 'none' : '',
+            }}
+            className={` w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4`}
           />
+          
 
         </div>
       </div>
@@ -88,15 +100,16 @@ return (
       </div>
       <div className="flex flex-col py-6 md:py-9 h-48 mx-4 lg:items-center">
         <span className="font-semibold uppercase text-xl md:text-2xl lg:text-3xl text-neutral-800">
-          DAVID PUIG PÉREZ
+          John Doe Johnson
           <p className="text-sm text-neutral-800">FOTÓGRAFO</p>
         </span>
-        <p className="p-2 custom-font text-base md:text-xl lg:text-2xl text-neutral-800">De mi profesión solo puedo decir que es la más apasionante del mundo</p>
+        <p className="p-2 custom-font text-base md:text-xl lg:text-2xl text-neutral-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque natus obcaecati error, distinctio necessitatibus, dignissimos doloremque suscipit fuga nostrum ex ratione repudiandae ducimus voluptates laborum consectetur debitis quis non odio?</p>
       </div>
     </div>
-    <Picture>
+    <Picture/>
       
-    </Picture>
+    <Contact/>
+    <Footer/>
     <div
      style={{
       opacity: scrollEffect
@@ -111,8 +124,8 @@ return (
 
 const applogo = [
   {
-    imgSrc: '/imgs/logo_completo_n.png',
-    alt: 'Logo David Puig',
+    imgSrc: 'design-log.png',
+    alt: 'Logo Camera Man',
   }
 ]
 

@@ -41,3 +41,25 @@ body {
 .area4 { grid-area: 2 / 2 / 3 / 4; }
 .area5 { grid-area: 3 / 1 / 4 / 3; }
 .area6 { grid-area: 3 / 3 / 4 / 4; }
+
+.custom-form {
+  box-shadow: 2px 4px 2px 1px #020202;
+  margin: 1rem auto;
+}
+.custom-form:hover {
+  border-color: #933d3d;
+  box-shadow: 3px 5px 2px 2px #020202;
+  transform: scale(1.021);
+}
+.custom-form label {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+.custom-form input ,.custom-form textarea{
+  padding: 6px;
+}
+.custom-form input, .custom-form textarea {
+  border-bottom: .5px solid hsl(0, 0%, 1%);
+
+  border-right: .5px solid #020202;
+}

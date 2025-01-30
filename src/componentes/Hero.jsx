@@ -26,34 +26,34 @@ const HorizontalScrollCarousel = () => {
 
 const cards = [
     {
-      url: "/imgs/ch-comu-casamance-seneg.jpeg",
+      url: "dfcxpex.jpg",
       id: 1,
-      title: "Retratos",
+      title: "Lorem",
     },
     {
-      url: "/imgs/belice-unfpa.jpeg",
+      url: "dlksapex.jpg",
       id: 2,
-      title: "Reportaje",
+      title: "Lorem",
     },
     {
-      url: "/imgs/c-nos-p.jpeg",
+      url: "fash.jpg",
       id: 3,
-      title: "Publicidad",
+      title: "Lorem",
     },
     {
-      url: "/imgs/moda-sm-wd.jpeg",
+      url: "dsapex.jpg",
       id: 5,
-      title: "Moda",
+      title: "Lorem",
     },
     {
-      url: "/imgs/7.jpg",
+      url: "anntarazevich-5621248.jpg",
       id: 6,
-      title: "Producto",
+      title: "Lorem",
     },
     {
-      url: "/imgs/s-domingo-m.jpeg",
+      url: "pexels-iskcontvdhaka-12700042.jpg",
       id: 7,
-      title: "Audiovisual",
+      title: "Lorem",
     },
   ];
 

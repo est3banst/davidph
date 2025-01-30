@@ -74,38 +74,38 @@ export default Picture
 
 const pictures = [
     {
-        src:'/imgs/b-dancr.jpeg',
-        alt: 'Ballet',
+        src:'pexels-cottonbro-10037708.jpg',
+        alt: 'Pexels Picture',
         id: 11,
     },
     {
-        src:'/imgs/bo-s-m.jpeg',
-        alt:'Boxeo',
+        src:'pexels-esrageziyor-45760220-7473287.jpg',
+        alt:'Pexels Picture',
         id: 22,
     },
     {
-        src:'/imgs/l-raffo.jpeg',
-        alt:'Laura Raffo',
+        src:'pexels-iskcontvdhaka-12700042.jpg',
+        alt:'Pexels Picture',
         id: 33,
     },
     {
-        src:'/imgs/sa-mod.jpeg',
-        alt:'María José Siri',
+        src:'pexels-npandey-2446439.jpg',
+        alt:'Pexels Picture',
         id: 44,
     },
     {
-        src:'/imgs/marian-c.jpeg',
-        alt:'Mariano Arana',
+        src:'pexels-ssteenbergenn-3621344.jpg',
+        alt:'Pexels Picture',
         id: 55,
     },
     {
-        src:'/imgs/cheff-e.jpeg',
-        alt:'Cheff',
+        src:'pexels-thelazyartist-1108602.jpg',
+        alt:'Pexels Picture',
         id: 66,
     },
     {
-      src: '/imgs/c-piaget.jpeg',
-      alt: 'Modelo',
+      src: 'pexels-tonive-14140136.jpg',
+      alt: 'Pexels Picture',
       id: 77,
     },
 ]
