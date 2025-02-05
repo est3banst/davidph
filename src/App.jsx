@@ -21,7 +21,7 @@ const App = () => {
       if (carouselRef.current && nameIdRef.current) {
         const carouselTop = carouselRef.current.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-       console.log(carouselTop)
+    
        if (carouselTop <= 400) {
         setHidden(true);
        }
@@ -99,7 +99,7 @@ return (
       
       <HorizontalScrollCarousel />
       </div>
-      <div className="flex flex-col py-6 md:py-9 h-48 mx-4 lg:items-center">
+      <div className="flex flex-col py-6 md:py-9 h-auto mx-4 lg:items-center">
         <span className="font-semibold uppercase text-xl md:text-2xl lg:text-3xl text-neutral-800">
           John Doe Johnson
           <p className="text-sm text-neutral-800">FOTÓGRAFO</p>
@@ -118,7 +118,7 @@ return (
      }}
      className={`text-neutral-800 w-7 animate-bounce absolute z-[779] bottom-[10%] right-[5%]`}
      id="svg-down-arrow">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M14.207 1.707L13.5 1l-6 6l-6-6l-.707.707l6.353 6.354h.708zm0 6L13.5 7l-6 6l-6-6l-.707.707l6.353 6.354h.708z" clip-rule="evenodd"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="currentColor" fillRule="evenodd" d="M14.207 1.707L13.5 1l-6 6l-6-6l-.707.707l6.353 6.354h.708zm0 6L13.5 7l-6 6l-6-6l-.707.707l6.353 6.354h.708z" clipRule="evenodd"/></svg>
     </div>
     </>
   );
