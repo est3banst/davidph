@@ -1,7 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import "tailwindcss";
 
 @font-face {
   font-family: myCustFont;
@@ -19,6 +18,9 @@ body {
 #percent-total {
   font-size: 250px;
   transform: translateY(80px);
+}
+.inter {
+  font-family: 'Inter', serif;
 }
 .custom-font {
   font-family: customHandFont, serif;

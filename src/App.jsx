@@ -50,7 +50,7 @@ const App = () => {
 return (
     <>
     <div className="bg-neutral-100">
-      <div className="grid h-[100vh] gap-5 md:justify-around justify-center">
+      <div className="grid h-[100vh] relative gap-5 md:justify-around justify-center">
         <div className="grid grid-rows-2 h-[20vh] items-center justify-evenly">
 
           <div className="flex gap-3 items-center">
@@ -79,17 +79,8 @@ return (
             zIndex: textPos ? 1 : 70,
           }}
           className=
-          {`w-[100vw] mix-blend-darken h-[40vh] md:h-[60vh] mt-2 mb-6 text-center bottom-0 transition-all duration-1000`}>
-          <span className="font-extrabold absolute bottom-0 z-[988] text-xl right-6 text-slate-900">John Doe ,Ph.</span>
-          <img 
-            src={applogo[0].imgSrc} 
-            alt={applogo[0].alt}
-            style={{
-              display: hideIn ? 'none' : '',
-            }}
-            className={` w-4/5 h-[100%] m-auto max-w-lg md:w-1/2 lg:w-3/4 mb-4`}
-          />
-          
+          {`w-[100vw] mix-blend-darken h-screen relative flex items-center mt-2 mb-6 text-center bottom-0 transition-all duration-1000`}>
+          <h2 className="font-extrabold inter uppercase text-5xl absolute top-1/2 h-screen w-full z-[9999] text-2xl left-0 text-slate-900">Christian Hertz ,Ph.</h2>
 
         </div>
       </div>
@@ -101,7 +92,7 @@ return (
       </div>
       <div className="flex flex-col py-6 md:py-9 h-auto mx-4 lg:items-center">
         <span className="font-semibold uppercase text-xl md:text-2xl lg:text-3xl text-neutral-800">
-          John Doe Johnson
+         CHRISTIAN HERTZ
           <p className="text-sm text-neutral-800">FOTÓGRAFO</p>
         </span>
         <p className="p-2 custom-font text-base md:text-xl lg:text-2xl text-neutral-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque natus obcaecati error, distinctio necessitatibus, dignissimos doloremque suscipit fuga nostrum ex ratione repudiandae ducimus voluptates laborum consectetur debitis quis non odio?</p>
